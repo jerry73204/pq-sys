@@ -1,4 +1,3 @@
-#[cfg(feature="pkg-config")]
 extern crate pkg_config;
 
 #[cfg(target_env = "msvc")]
@@ -94,14 +93,8 @@ fn main() {
     println!("cargo:rustc-link-lib={}", LinkingOptions::from_env());
 }
 
-#[cfg(feature = "pkg-config")]
 fn configured_by_pkg_config() -> bool {
     pkg_config::probe_library("libpq").is_ok()
-}
-
-#[cfg(not(feature = "pkg-config"))]
-fn configured_by_pkg_config() -> bool {
-    false
 }
 
 #[cfg(target_env = "msvc")]
