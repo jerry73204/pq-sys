@@ -4,24 +4,34 @@
 
 #[repr(C)]
 pub struct __BindgenUnionField<T>(::std::marker::PhantomData<T>);
-impl <T> __BindgenUnionField<T> {
+impl<T> __BindgenUnionField<T> {
     #[inline]
-    pub fn new() -> Self { __BindgenUnionField(::std::marker::PhantomData) }
+    pub fn new() -> Self {
+        __BindgenUnionField(::std::marker::PhantomData)
+    }
     #[inline]
-    pub unsafe fn as_ref(&self) -> &T { ::std::mem::transmute(self) }
+    pub unsafe fn as_ref(&self) -> &T {
+        ::std::mem::transmute(self)
+    }
     #[inline]
-    pub unsafe fn as_mut(&mut self) -> &mut T { ::std::mem::transmute(self) }
+    pub unsafe fn as_mut(&mut self) -> &mut T {
+        ::std::mem::transmute(self)
+    }
 }
-impl <T> ::std::default::Default for __BindgenUnionField<T> {
+impl<T> ::std::default::Default for __BindgenUnionField<T> {
     #[inline]
-    fn default() -> Self { Self::new() }
+    fn default() -> Self {
+        Self::new()
+    }
 }
-impl <T> ::std::clone::Clone for __BindgenUnionField<T> {
+impl<T> ::std::clone::Clone for __BindgenUnionField<T> {
     #[inline]
-    fn clone(&self) -> Self { Self::new() }
+    fn clone(&self) -> Self {
+        Self::new()
+    }
 }
-impl <T> ::std::marker::Copy for __BindgenUnionField<T> { }
-impl <T> ::std::fmt::Debug for __BindgenUnionField<T> {
+impl<T> ::std::marker::Copy for __BindgenUnionField<T> {}
+impl<T> ::std::fmt::Debug for __BindgenUnionField<T> {
     fn fmt(&self, fmt: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
         fmt.write_str("__BindgenUnionField")
     }
@@ -38,11 +48,13 @@ pub struct __sbuf {
 }
 #[test]
 fn bindgen_test_layout___sbuf() {
-    assert_eq!(::std::mem::size_of::<__sbuf>() , 16usize);
-    assert_eq!(::std::mem::align_of::<__sbuf>() , 8usize);
+    assert_eq!(::std::mem::size_of::<__sbuf>(), 16usize);
+    assert_eq!(::std::mem::align_of::<__sbuf>(), 8usize);
 }
 impl Clone for __sbuf {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -58,29 +70,30 @@ pub struct __sFILE {
     pub _bf: __sbuf,
     pub _lbfsize: ::std::os::raw::c_int,
     pub _cookie: *mut ::std::os::raw::c_void,
-    pub _close: ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                               *mut ::std::os::raw::c_void)
-                                          -> ::std::os::raw::c_int>,
-    pub _read: ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                              *mut ::std::os::raw::c_void,
-                                                          arg2:
-                                                              *mut ::std::os::raw::c_char,
-                                                          arg3:
-                                                              ::std::os::raw::c_int)
-                                         -> ::std::os::raw::c_int>,
-    pub _seek: ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                              *mut ::std::os::raw::c_void,
-                                                          arg2: fpos_t,
-                                                          arg3:
-                                                              ::std::os::raw::c_int)
-                                         -> ::std::os::raw::c_longlong>,
-    pub _write: ::std::option::Option<unsafe extern "C" fn(arg1:
-                                                               *mut ::std::os::raw::c_void,
-                                                           arg2:
-                                                               *const ::std::os::raw::c_char,
-                                                           arg3:
-                                                               ::std::os::raw::c_int)
-                                          -> ::std::os::raw::c_int>,
+    pub _close: ::std::option::Option<
+        unsafe extern "C" fn(arg1: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int,
+    >,
+    pub _read: ::std::option::Option<
+        unsafe extern "C" fn(
+            arg1: *mut ::std::os::raw::c_void,
+            arg2: *mut ::std::os::raw::c_char,
+            arg3: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int,
+    >,
+    pub _seek: ::std::option::Option<
+        unsafe extern "C" fn(
+            arg1: *mut ::std::os::raw::c_void,
+            arg2: fpos_t,
+            arg3: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_longlong,
+    >,
+    pub _write: ::std::option::Option<
+        unsafe extern "C" fn(
+            arg1: *mut ::std::os::raw::c_void,
+            arg2: *const ::std::os::raw::c_char,
+            arg3: ::std::os::raw::c_int,
+        ) -> ::std::os::raw::c_int,
+    >,
     pub _ub: __sbuf,
     pub _extra: *mut __sFILEX,
     pub _ur: ::std::os::raw::c_int,
@@ -92,26 +105,24 @@ pub struct __sFILE {
 }
 #[test]
 fn bindgen_test_layout___sFILE() {
-    assert_eq!(::std::mem::size_of::<__sFILE>() , 152usize);
-    assert_eq!(::std::mem::align_of::<__sFILE>() , 8usize);
+    assert_eq!(::std::mem::size_of::<__sFILE>(), 152usize);
+    assert_eq!(::std::mem::align_of::<__sFILE>(), 8usize);
 }
 impl Clone for __sFILE {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type FILE = __sFILE;
 pub type Oid = ::std::os::raw::c_uint;
 pub const CONNECTION_OK: _bindgen_ty_2 = _bindgen_ty_2::CONNECTION_OK;
 pub const CONNECTION_BAD: _bindgen_ty_2 = _bindgen_ty_2::CONNECTION_BAD;
-pub const CONNECTION_STARTED: _bindgen_ty_2 =
-    _bindgen_ty_2::CONNECTION_STARTED;
+pub const CONNECTION_STARTED: _bindgen_ty_2 = _bindgen_ty_2::CONNECTION_STARTED;
 pub const CONNECTION_MADE: _bindgen_ty_2 = _bindgen_ty_2::CONNECTION_MADE;
-pub const CONNECTION_AWAITING_RESPONSE: _bindgen_ty_2 =
-    _bindgen_ty_2::CONNECTION_AWAITING_RESPONSE;
-pub const CONNECTION_AUTH_OK: _bindgen_ty_2 =
-    _bindgen_ty_2::CONNECTION_AUTH_OK;
+pub const CONNECTION_AWAITING_RESPONSE: _bindgen_ty_2 = _bindgen_ty_2::CONNECTION_AWAITING_RESPONSE;
+pub const CONNECTION_AUTH_OK: _bindgen_ty_2 = _bindgen_ty_2::CONNECTION_AUTH_OK;
 pub const CONNECTION_SETENV: _bindgen_ty_2 = _bindgen_ty_2::CONNECTION_SETENV;
-pub const CONNECTION_SSL_STARTUP: _bindgen_ty_2 =
-    _bindgen_ty_2::CONNECTION_SSL_STARTUP;
+pub const CONNECTION_SSL_STARTUP: _bindgen_ty_2 = _bindgen_ty_2::CONNECTION_SSL_STARTUP;
 pub const CONNECTION_NEEDED: _bindgen_ty_2 = _bindgen_ty_2::CONNECTION_NEEDED;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -127,15 +138,11 @@ pub enum _bindgen_ty_2 {
     CONNECTION_NEEDED = 8,
 }
 pub use self::_bindgen_ty_2 as ConnStatusType;
-pub const PGRES_POLLING_FAILED: _bindgen_ty_3 =
-    _bindgen_ty_3::PGRES_POLLING_FAILED;
-pub const PGRES_POLLING_READING: _bindgen_ty_3 =
-    _bindgen_ty_3::PGRES_POLLING_READING;
-pub const PGRES_POLLING_WRITING: _bindgen_ty_3 =
-    _bindgen_ty_3::PGRES_POLLING_WRITING;
+pub const PGRES_POLLING_FAILED: _bindgen_ty_3 = _bindgen_ty_3::PGRES_POLLING_FAILED;
+pub const PGRES_POLLING_READING: _bindgen_ty_3 = _bindgen_ty_3::PGRES_POLLING_READING;
+pub const PGRES_POLLING_WRITING: _bindgen_ty_3 = _bindgen_ty_3::PGRES_POLLING_WRITING;
 pub const PGRES_POLLING_OK: _bindgen_ty_3 = _bindgen_ty_3::PGRES_POLLING_OK;
-pub const PGRES_POLLING_ACTIVE: _bindgen_ty_3 =
-    _bindgen_ty_3::PGRES_POLLING_ACTIVE;
+pub const PGRES_POLLING_ACTIVE: _bindgen_ty_3 = _bindgen_ty_3::PGRES_POLLING_ACTIVE;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum _bindgen_ty_3 {
@@ -151,14 +158,11 @@ pub const PGRES_COMMAND_OK: _bindgen_ty_4 = _bindgen_ty_4::PGRES_COMMAND_OK;
 pub const PGRES_TUPLES_OK: _bindgen_ty_4 = _bindgen_ty_4::PGRES_TUPLES_OK;
 pub const PGRES_COPY_OUT: _bindgen_ty_4 = _bindgen_ty_4::PGRES_COPY_OUT;
 pub const PGRES_COPY_IN: _bindgen_ty_4 = _bindgen_ty_4::PGRES_COPY_IN;
-pub const PGRES_BAD_RESPONSE: _bindgen_ty_4 =
-    _bindgen_ty_4::PGRES_BAD_RESPONSE;
-pub const PGRES_NONFATAL_ERROR: _bindgen_ty_4 =
-    _bindgen_ty_4::PGRES_NONFATAL_ERROR;
+pub const PGRES_BAD_RESPONSE: _bindgen_ty_4 = _bindgen_ty_4::PGRES_BAD_RESPONSE;
+pub const PGRES_NONFATAL_ERROR: _bindgen_ty_4 = _bindgen_ty_4::PGRES_NONFATAL_ERROR;
 pub const PGRES_FATAL_ERROR: _bindgen_ty_4 = _bindgen_ty_4::PGRES_FATAL_ERROR;
 pub const PGRES_COPY_BOTH: _bindgen_ty_4 = _bindgen_ty_4::PGRES_COPY_BOTH;
-pub const PGRES_SINGLE_TUPLE: _bindgen_ty_4 =
-    _bindgen_ty_4::PGRES_SINGLE_TUPLE;
+pub const PGRES_SINGLE_TUPLE: _bindgen_ty_4 = _bindgen_ty_4::PGRES_SINGLE_TUPLE;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum _bindgen_ty_4 {
@@ -202,8 +206,7 @@ pub enum _bindgen_ty_6 {
 pub use self::_bindgen_ty_6 as PGVerbosity;
 pub const PQPING_OK: _bindgen_ty_7 = _bindgen_ty_7::PQPING_OK;
 pub const PQPING_REJECT: _bindgen_ty_7 = _bindgen_ty_7::PQPING_REJECT;
-pub const PQPING_NO_RESPONSE: _bindgen_ty_7 =
-    _bindgen_ty_7::PQPING_NO_RESPONSE;
+pub const PQPING_NO_RESPONSE: _bindgen_ty_7 = _bindgen_ty_7::PQPING_NO_RESPONSE;
 pub const PQPING_NO_ATTEMPT: _bindgen_ty_7 = _bindgen_ty_7::PQPING_NO_ATTEMPT;
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
@@ -236,22 +239,21 @@ pub struct pgNotify {
 }
 #[test]
 fn bindgen_test_layout_pgNotify() {
-    assert_eq!(::std::mem::size_of::<pgNotify>() , 32usize);
-    assert_eq!(::std::mem::align_of::<pgNotify>() , 8usize);
+    assert_eq!(::std::mem::size_of::<pgNotify>(), 32usize);
+    assert_eq!(::std::mem::align_of::<pgNotify>(), 8usize);
 }
 impl Clone for pgNotify {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PGnotify = pgNotify;
-pub type PQnoticeReceiver =
-    ::std::option::Option<unsafe extern "C" fn(arg:
-                                                   *mut ::std::os::raw::c_void,
-                                               res: *const PGresult)>;
-pub type PQnoticeProcessor =
-    ::std::option::Option<unsafe extern "C" fn(arg:
-                                                   *mut ::std::os::raw::c_void,
-                                               message:
-                                                   *const ::std::os::raw::c_char)>;
+pub type PQnoticeReceiver = ::std::option::Option<
+    unsafe extern "C" fn(arg: *mut ::std::os::raw::c_void, res: *const PGresult),
+>;
+pub type PQnoticeProcessor = ::std::option::Option<
+    unsafe extern "C" fn(arg: *mut ::std::os::raw::c_void, message: *const ::std::os::raw::c_char),
+>;
 pub type pqbool = ::std::os::raw::c_char;
 #[repr(C)]
 #[derive(Debug, Copy)]
@@ -269,11 +271,13 @@ pub struct _PQprintOpt {
 }
 #[test]
 fn bindgen_test_layout__PQprintOpt() {
-    assert_eq!(::std::mem::size_of::<_PQprintOpt>() , 40usize);
-    assert_eq!(::std::mem::align_of::<_PQprintOpt>() , 8usize);
+    assert_eq!(::std::mem::size_of::<_PQprintOpt>(), 40usize);
+    assert_eq!(::std::mem::align_of::<_PQprintOpt>(), 8usize);
 }
 impl Clone for _PQprintOpt {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PQprintOpt = _PQprintOpt;
 #[repr(C)]
@@ -289,11 +293,13 @@ pub struct _PQconninfoOption {
 }
 #[test]
 fn bindgen_test_layout__PQconninfoOption() {
-    assert_eq!(::std::mem::size_of::<_PQconninfoOption>() , 56usize);
-    assert_eq!(::std::mem::align_of::<_PQconninfoOption>() , 8usize);
+    assert_eq!(::std::mem::size_of::<_PQconninfoOption>(), 56usize);
+    assert_eq!(::std::mem::align_of::<_PQconninfoOption>(), 8usize);
 }
 impl Clone for _PQconninfoOption {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PQconninfoOption = _PQconninfoOption;
 #[repr(C)]
@@ -312,20 +318,26 @@ pub struct _bindgen_ty_8__bindgen_ty_1 {
 }
 #[test]
 fn bindgen_test_layout__bindgen_ty_8__bindgen_ty_1() {
-    assert_eq!(::std::mem::size_of::<_bindgen_ty_8__bindgen_ty_1>() , 8usize);
-    assert_eq!(::std::mem::align_of::<_bindgen_ty_8__bindgen_ty_1>() ,
-               8usize);
+    assert_eq!(::std::mem::size_of::<_bindgen_ty_8__bindgen_ty_1>(), 8usize);
+    assert_eq!(
+        ::std::mem::align_of::<_bindgen_ty_8__bindgen_ty_1>(),
+        8usize
+    );
 }
 impl Clone for _bindgen_ty_8__bindgen_ty_1 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 #[test]
 fn bindgen_test_layout__bindgen_ty_8() {
-    assert_eq!(::std::mem::size_of::<_bindgen_ty_8>() , 16usize);
-    assert_eq!(::std::mem::align_of::<_bindgen_ty_8>() , 8usize);
+    assert_eq!(::std::mem::size_of::<_bindgen_ty_8>(), 16usize);
+    assert_eq!(::std::mem::align_of::<_bindgen_ty_8>(), 8usize);
 }
 impl Clone for _bindgen_ty_8 {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PQArgBlock = _bindgen_ty_8;
 #[repr(C)]
@@ -341,45 +353,48 @@ pub struct pgresAttDesc {
 }
 #[test]
 fn bindgen_test_layout_pgresAttDesc() {
-    assert_eq!(::std::mem::size_of::<pgresAttDesc>() , 32usize);
-    assert_eq!(::std::mem::align_of::<pgresAttDesc>() , 8usize);
+    assert_eq!(::std::mem::size_of::<pgresAttDesc>(), 32usize);
+    assert_eq!(::std::mem::align_of::<pgresAttDesc>(), 8usize);
 }
 impl Clone for pgresAttDesc {
-    fn clone(&self) -> Self { *self }
+    fn clone(&self) -> Self {
+        *self
+    }
 }
 pub type PGresAttDesc = pgresAttDesc;
 extern "C" {
-    pub fn PQconnectStart(conninfo: *const ::std::os::raw::c_char)
-     -> *mut PGconn;
+    pub fn PQconnectStart(conninfo: *const ::std::os::raw::c_char) -> *mut PGconn;
 }
 extern "C" {
-    pub fn PQconnectStartParams(keywords:
-                                    *const *const ::std::os::raw::c_char,
-                                values: *const *const ::std::os::raw::c_char,
-                                expand_dbname: ::std::os::raw::c_int)
-     -> *mut PGconn;
+    pub fn PQconnectStartParams(
+        keywords: *const *const ::std::os::raw::c_char,
+        values: *const *const ::std::os::raw::c_char,
+        expand_dbname: ::std::os::raw::c_int,
+    ) -> *mut PGconn;
 }
 extern "C" {
     pub fn PQconnectPoll(conn: *mut PGconn) -> PostgresPollingStatusType;
 }
 extern "C" {
-    pub fn PQconnectdb(conninfo: *const ::std::os::raw::c_char)
-     -> *mut PGconn;
+    pub fn PQconnectdb(conninfo: *const ::std::os::raw::c_char) -> *mut PGconn;
 }
 extern "C" {
-    pub fn PQconnectdbParams(keywords: *const *const ::std::os::raw::c_char,
-                             values: *const *const ::std::os::raw::c_char,
-                             expand_dbname: ::std::os::raw::c_int)
-     -> *mut PGconn;
+    pub fn PQconnectdbParams(
+        keywords: *const *const ::std::os::raw::c_char,
+        values: *const *const ::std::os::raw::c_char,
+        expand_dbname: ::std::os::raw::c_int,
+    ) -> *mut PGconn;
 }
 extern "C" {
-    pub fn PQsetdbLogin(pghost: *const ::std::os::raw::c_char,
-                        pgport: *const ::std::os::raw::c_char,
-                        pgoptions: *const ::std::os::raw::c_char,
-                        pgtty: *const ::std::os::raw::c_char,
-                        dbName: *const ::std::os::raw::c_char,
-                        login: *const ::std::os::raw::c_char,
-                        pwd: *const ::std::os::raw::c_char) -> *mut PGconn;
+    pub fn PQsetdbLogin(
+        pghost: *const ::std::os::raw::c_char,
+        pgport: *const ::std::os::raw::c_char,
+        pgoptions: *const ::std::os::raw::c_char,
+        pgtty: *const ::std::os::raw::c_char,
+        dbName: *const ::std::os::raw::c_char,
+        login: *const ::std::os::raw::c_char,
+        pwd: *const ::std::os::raw::c_char,
+    ) -> *mut PGconn;
 }
 extern "C" {
     pub fn PQfinish(conn: *mut PGconn);
@@ -388,9 +403,10 @@ extern "C" {
     pub fn PQconndefaults() -> *mut PQconninfoOption;
 }
 extern "C" {
-    pub fn PQconninfoParse(conninfo: *const ::std::os::raw::c_char,
-                           errmsg: *mut *mut ::std::os::raw::c_char)
-     -> *mut PQconninfoOption;
+    pub fn PQconninfoParse(
+        conninfo: *const ::std::os::raw::c_char,
+        errmsg: *mut *mut ::std::os::raw::c_char,
+    ) -> *mut PQconninfoOption;
 }
 extern "C" {
     pub fn PQconninfo(conn: *mut PGconn) -> *mut PQconninfoOption;
@@ -414,10 +430,11 @@ extern "C" {
     pub fn PQfreeCancel(cancel: *mut PGcancel);
 }
 extern "C" {
-    pub fn PQcancel(cancel: *mut PGcancel,
-                    errbuf: *mut ::std::os::raw::c_char,
-                    errbufsize: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQcancel(
+        cancel: *mut PGcancel,
+        errbuf: *mut ::std::os::raw::c_char,
+        errbufsize: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQrequestCancel(conn: *mut PGconn) -> ::std::os::raw::c_int;
@@ -447,13 +464,13 @@ extern "C" {
     pub fn PQstatus(conn: *const PGconn) -> ConnStatusType;
 }
 extern "C" {
-    pub fn PQtransactionStatus(conn: *const PGconn)
-     -> PGTransactionStatusType;
+    pub fn PQtransactionStatus(conn: *const PGconn) -> PGTransactionStatusType;
 }
 extern "C" {
-    pub fn PQparameterStatus(conn: *const PGconn,
-                             paramName: *const ::std::os::raw::c_char)
-     -> *const ::std::os::raw::c_char;
+    pub fn PQparameterStatus(
+        conn: *const PGconn,
+        paramName: *const ::std::os::raw::c_char,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
     pub fn PQprotocolVersion(conn: *const PGconn) -> ::std::os::raw::c_int;
@@ -471,37 +488,37 @@ extern "C" {
     pub fn PQbackendPID(conn: *const PGconn) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQconnectionNeedsPassword(conn: *const PGconn)
-     -> ::std::os::raw::c_int;
+    pub fn PQconnectionNeedsPassword(conn: *const PGconn) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQconnectionUsedPassword(conn: *const PGconn)
-     -> ::std::os::raw::c_int;
+    pub fn PQconnectionUsedPassword(conn: *const PGconn) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQclientEncoding(conn: *const PGconn) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQsetClientEncoding(conn: *mut PGconn,
-                               encoding: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
+    pub fn PQsetClientEncoding(
+        conn: *mut PGconn,
+        encoding: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQsslInUse(conn: *mut PGconn) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQsslStruct(conn: *mut PGconn,
-                       struct_name: *const ::std::os::raw::c_char)
-     -> *mut ::std::os::raw::c_void;
+    pub fn PQsslStruct(
+        conn: *mut PGconn,
+        struct_name: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn PQsslAttribute(conn: *mut PGconn,
-                          attribute_name: *const ::std::os::raw::c_char)
-     -> *const ::std::os::raw::c_char;
+    pub fn PQsslAttribute(
+        conn: *mut PGconn,
+        attribute_name: *const ::std::os::raw::c_char,
+    ) -> *const ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn PQsslAttributeNames(conn: *mut PGconn)
-     -> *const *const ::std::os::raw::c_char;
+    pub fn PQsslAttributeNames(conn: *mut PGconn) -> *const *const ::std::os::raw::c_char;
 }
 extern "C" {
     pub fn PQgetssl(conn: *mut PGconn) -> *mut ::std::os::raw::c_void;
@@ -510,12 +527,10 @@ extern "C" {
     pub fn PQinitSSL(do_init: ::std::os::raw::c_int);
 }
 extern "C" {
-    pub fn PQinitOpenSSL(do_ssl: ::std::os::raw::c_int,
-                         do_crypto: ::std::os::raw::c_int);
+    pub fn PQinitOpenSSL(do_ssl: ::std::os::raw::c_int, do_crypto: ::std::os::raw::c_int);
 }
 extern "C" {
-    pub fn PQsetErrorVerbosity(conn: *mut PGconn, verbosity: PGVerbosity)
-     -> PGVerbosity;
+    pub fn PQsetErrorVerbosity(conn: *mut PGconn, verbosity: PGVerbosity) -> PGVerbosity;
 }
 extern "C" {
     pub fn PQtrace(conn: *mut PGconn, debug_port: *mut FILE);
@@ -524,86 +539,96 @@ extern "C" {
     pub fn PQuntrace(conn: *mut PGconn);
 }
 extern "C" {
-    pub fn PQsetNoticeReceiver(conn: *mut PGconn, proc_: PQnoticeReceiver,
-                               arg: *mut ::std::os::raw::c_void)
-     -> PQnoticeReceiver;
+    pub fn PQsetNoticeReceiver(
+        conn: *mut PGconn,
+        proc_: PQnoticeReceiver,
+        arg: *mut ::std::os::raw::c_void,
+    ) -> PQnoticeReceiver;
 }
 extern "C" {
-    pub fn PQsetNoticeProcessor(conn: *mut PGconn, proc_: PQnoticeProcessor,
-                                arg: *mut ::std::os::raw::c_void)
-     -> PQnoticeProcessor;
+    pub fn PQsetNoticeProcessor(
+        conn: *mut PGconn,
+        proc_: PQnoticeProcessor,
+        arg: *mut ::std::os::raw::c_void,
+    ) -> PQnoticeProcessor;
 }
 pub type pgthreadlock_t =
-    ::std::option::Option<unsafe extern "C" fn(acquire:
-                                                   ::std::os::raw::c_int)>;
+    ::std::option::Option<unsafe extern "C" fn(acquire: ::std::os::raw::c_int)>;
 extern "C" {
     pub fn PQregisterThreadLock(newhandler: pgthreadlock_t) -> pgthreadlock_t;
 }
 extern "C" {
-    pub fn PQexec(conn: *mut PGconn, query: *const ::std::os::raw::c_char)
-     -> *mut PGresult;
+    pub fn PQexec(conn: *mut PGconn, query: *const ::std::os::raw::c_char) -> *mut PGresult;
 }
 extern "C" {
-    pub fn PQexecParams(conn: *mut PGconn,
-                        command: *const ::std::os::raw::c_char,
-                        nParams: ::std::os::raw::c_int,
-                        paramTypes: *const Oid,
-                        paramValues: *const *const ::std::os::raw::c_char,
-                        paramLengths: *const ::std::os::raw::c_int,
-                        paramFormats: *const ::std::os::raw::c_int,
-                        resultFormat: ::std::os::raw::c_int) -> *mut PGresult;
+    pub fn PQexecParams(
+        conn: *mut PGconn,
+        command: *const ::std::os::raw::c_char,
+        nParams: ::std::os::raw::c_int,
+        paramTypes: *const Oid,
+        paramValues: *const *const ::std::os::raw::c_char,
+        paramLengths: *const ::std::os::raw::c_int,
+        paramFormats: *const ::std::os::raw::c_int,
+        resultFormat: ::std::os::raw::c_int,
+    ) -> *mut PGresult;
 }
 extern "C" {
-    pub fn PQprepare(conn: *mut PGconn,
-                     stmtName: *const ::std::os::raw::c_char,
-                     query: *const ::std::os::raw::c_char,
-                     nParams: ::std::os::raw::c_int, paramTypes: *const Oid)
-     -> *mut PGresult;
+    pub fn PQprepare(
+        conn: *mut PGconn,
+        stmtName: *const ::std::os::raw::c_char,
+        query: *const ::std::os::raw::c_char,
+        nParams: ::std::os::raw::c_int,
+        paramTypes: *const Oid,
+    ) -> *mut PGresult;
 }
 extern "C" {
-    pub fn PQexecPrepared(conn: *mut PGconn,
-                          stmtName: *const ::std::os::raw::c_char,
-                          nParams: ::std::os::raw::c_int,
-                          paramValues: *const *const ::std::os::raw::c_char,
-                          paramLengths: *const ::std::os::raw::c_int,
-                          paramFormats: *const ::std::os::raw::c_int,
-                          resultFormat: ::std::os::raw::c_int)
-     -> *mut PGresult;
+    pub fn PQexecPrepared(
+        conn: *mut PGconn,
+        stmtName: *const ::std::os::raw::c_char,
+        nParams: ::std::os::raw::c_int,
+        paramValues: *const *const ::std::os::raw::c_char,
+        paramLengths: *const ::std::os::raw::c_int,
+        paramFormats: *const ::std::os::raw::c_int,
+        resultFormat: ::std::os::raw::c_int,
+    ) -> *mut PGresult;
 }
 extern "C" {
-    pub fn PQsendQuery(conn: *mut PGconn,
-                       query: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
+    pub fn PQsendQuery(
+        conn: *mut PGconn,
+        query: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQsendQueryParams(conn: *mut PGconn,
-                             command: *const ::std::os::raw::c_char,
-                             nParams: ::std::os::raw::c_int,
-                             paramTypes: *const Oid,
-                             paramValues:
-                                 *const *const ::std::os::raw::c_char,
-                             paramLengths: *const ::std::os::raw::c_int,
-                             paramFormats: *const ::std::os::raw::c_int,
-                             resultFormat: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQsendQueryParams(
+        conn: *mut PGconn,
+        command: *const ::std::os::raw::c_char,
+        nParams: ::std::os::raw::c_int,
+        paramTypes: *const Oid,
+        paramValues: *const *const ::std::os::raw::c_char,
+        paramLengths: *const ::std::os::raw::c_int,
+        paramFormats: *const ::std::os::raw::c_int,
+        resultFormat: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQsendPrepare(conn: *mut PGconn,
-                         stmtName: *const ::std::os::raw::c_char,
-                         query: *const ::std::os::raw::c_char,
-                         nParams: ::std::os::raw::c_int,
-                         paramTypes: *const Oid) -> ::std::os::raw::c_int;
+    pub fn PQsendPrepare(
+        conn: *mut PGconn,
+        stmtName: *const ::std::os::raw::c_char,
+        query: *const ::std::os::raw::c_char,
+        nParams: ::std::os::raw::c_int,
+        paramTypes: *const Oid,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQsendQueryPrepared(conn: *mut PGconn,
-                               stmtName: *const ::std::os::raw::c_char,
-                               nParams: ::std::os::raw::c_int,
-                               paramValues:
-                                   *const *const ::std::os::raw::c_char,
-                               paramLengths: *const ::std::os::raw::c_int,
-                               paramFormats: *const ::std::os::raw::c_int,
-                               resultFormat: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQsendQueryPrepared(
+        conn: *mut PGconn,
+        stmtName: *const ::std::os::raw::c_char,
+        nParams: ::std::os::raw::c_int,
+        paramValues: *const *const ::std::os::raw::c_char,
+        paramLengths: *const ::std::os::raw::c_int,
+        paramFormats: *const ::std::os::raw::c_int,
+        resultFormat: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQsetSingleRowMode(conn: *mut PGconn) -> ::std::os::raw::c_int;
@@ -621,48 +646,58 @@ extern "C" {
     pub fn PQnotifies(conn: *mut PGconn) -> *mut PGnotify;
 }
 extern "C" {
-    pub fn PQputCopyData(conn: *mut PGconn,
-                         buffer: *const ::std::os::raw::c_char,
-                         nbytes: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQputCopyData(
+        conn: *mut PGconn,
+        buffer: *const ::std::os::raw::c_char,
+        nbytes: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQputCopyEnd(conn: *mut PGconn,
-                        errormsg: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
+    pub fn PQputCopyEnd(
+        conn: *mut PGconn,
+        errormsg: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQgetCopyData(conn: *mut PGconn,
-                         buffer: *mut *mut ::std::os::raw::c_char,
-                         async: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQgetCopyData(
+        conn: *mut PGconn,
+        buffer: *mut *mut ::std::os::raw::c_char,
+        async: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQgetline(conn: *mut PGconn, string: *mut ::std::os::raw::c_char,
-                     length: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn PQgetline(
+        conn: *mut PGconn,
+        string: *mut ::std::os::raw::c_char,
+        length: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQputline(conn: *mut PGconn, string: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
+    pub fn PQputline(
+        conn: *mut PGconn,
+        string: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQgetlineAsync(conn: *mut PGconn,
-                          buffer: *mut ::std::os::raw::c_char,
-                          bufsize: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQgetlineAsync(
+        conn: *mut PGconn,
+        buffer: *mut ::std::os::raw::c_char,
+        bufsize: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQputnbytes(conn: *mut PGconn,
-                       buffer: *const ::std::os::raw::c_char,
-                       nbytes: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQputnbytes(
+        conn: *mut PGconn,
+        buffer: *const ::std::os::raw::c_char,
+        nbytes: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQendcopy(conn: *mut PGconn) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQsetnonblocking(conn: *mut PGconn, arg: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+        -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQisnonblocking(conn: *const PGconn) -> ::std::os::raw::c_int;
@@ -674,19 +709,25 @@ extern "C" {
     pub fn PQping(conninfo: *const ::std::os::raw::c_char) -> PGPing;
 }
 extern "C" {
-    pub fn PQpingParams(keywords: *const *const ::std::os::raw::c_char,
-                        values: *const *const ::std::os::raw::c_char,
-                        expand_dbname: ::std::os::raw::c_int) -> PGPing;
+    pub fn PQpingParams(
+        keywords: *const *const ::std::os::raw::c_char,
+        values: *const *const ::std::os::raw::c_char,
+        expand_dbname: ::std::os::raw::c_int,
+    ) -> PGPing;
 }
 extern "C" {
     pub fn PQflush(conn: *mut PGconn) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQfn(conn: *mut PGconn, fnid: ::std::os::raw::c_int,
-                result_buf: *mut ::std::os::raw::c_int,
-                result_len: *mut ::std::os::raw::c_int,
-                result_is_int: ::std::os::raw::c_int, args: *const PQArgBlock,
-                nargs: ::std::os::raw::c_int) -> *mut PGresult;
+    pub fn PQfn(
+        conn: *mut PGconn,
+        fnid: ::std::os::raw::c_int,
+        result_buf: *mut ::std::os::raw::c_int,
+        result_len: *mut ::std::os::raw::c_int,
+        result_is_int: ::std::os::raw::c_int,
+        args: *const PQArgBlock,
+        nargs: ::std::os::raw::c_int,
+    ) -> *mut PGresult;
 }
 extern "C" {
     pub fn PQresultStatus(res: *const PGresult) -> ExecStatusType;
@@ -695,13 +736,13 @@ extern "C" {
     pub fn PQresStatus(status: ExecStatusType) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn PQresultErrorMessage(res: *const PGresult)
-     -> *mut ::std::os::raw::c_char;
+    pub fn PQresultErrorMessage(res: *const PGresult) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn PQresultErrorField(res: *const PGresult,
-                              fieldcode: ::std::os::raw::c_int)
-     -> *mut ::std::os::raw::c_char;
+    pub fn PQresultErrorField(
+        res: *const PGresult,
+        fieldcode: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
     pub fn PQntuples(res: *const PGresult) -> ::std::os::raw::c_int;
@@ -713,37 +754,41 @@ extern "C" {
     pub fn PQbinaryTuples(res: *const PGresult) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQfname(res: *const PGresult, field_num: ::std::os::raw::c_int)
-     -> *mut ::std::os::raw::c_char;
+    pub fn PQfname(
+        res: *const PGresult,
+        field_num: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn PQfnumber(res: *const PGresult,
-                     field_name: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
+    pub fn PQfnumber(
+        res: *const PGresult,
+        field_name: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQftable(res: *const PGresult, field_num: ::std::os::raw::c_int)
-     -> Oid;
+    pub fn PQftable(res: *const PGresult, field_num: ::std::os::raw::c_int) -> Oid;
 }
 extern "C" {
-    pub fn PQftablecol(res: *const PGresult, field_num: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQftablecol(
+        res: *const PGresult,
+        field_num: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQfformat(res: *const PGresult, field_num: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQfformat(
+        res: *const PGresult,
+        field_num: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQftype(res: *const PGresult, field_num: ::std::os::raw::c_int)
-     -> Oid;
+    pub fn PQftype(res: *const PGresult, field_num: ::std::os::raw::c_int) -> Oid;
 }
 extern "C" {
     pub fn PQfsize(res: *const PGresult, field_num: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+        -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQfmod(res: *const PGresult, field_num: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQfmod(res: *const PGresult, field_num: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQcmdStatus(res: *mut PGresult) -> *mut ::std::os::raw::c_char;
@@ -758,46 +803,55 @@ extern "C" {
     pub fn PQcmdTuples(res: *mut PGresult) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn PQgetvalue(res: *const PGresult, tup_num: ::std::os::raw::c_int,
-                      field_num: ::std::os::raw::c_int)
-     -> *mut ::std::os::raw::c_char;
+    pub fn PQgetvalue(
+        res: *const PGresult,
+        tup_num: ::std::os::raw::c_int,
+        field_num: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn PQgetlength(res: *const PGresult, tup_num: ::std::os::raw::c_int,
-                       field_num: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQgetlength(
+        res: *const PGresult,
+        tup_num: ::std::os::raw::c_int,
+        field_num: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQgetisnull(res: *const PGresult, tup_num: ::std::os::raw::c_int,
-                       field_num: ::std::os::raw::c_int)
-     -> ::std::os::raw::c_int;
+    pub fn PQgetisnull(
+        res: *const PGresult,
+        tup_num: ::std::os::raw::c_int,
+        field_num: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQnparams(res: *const PGresult) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQparamtype(res: *const PGresult, param_num: ::std::os::raw::c_int)
-     -> Oid;
+    pub fn PQparamtype(res: *const PGresult, param_num: ::std::os::raw::c_int) -> Oid;
 }
 extern "C" {
-    pub fn PQdescribePrepared(conn: *mut PGconn,
-                              stmt: *const ::std::os::raw::c_char)
-     -> *mut PGresult;
+    pub fn PQdescribePrepared(
+        conn: *mut PGconn,
+        stmt: *const ::std::os::raw::c_char,
+    ) -> *mut PGresult;
 }
 extern "C" {
-    pub fn PQdescribePortal(conn: *mut PGconn,
-                            portal: *const ::std::os::raw::c_char)
-     -> *mut PGresult;
+    pub fn PQdescribePortal(
+        conn: *mut PGconn,
+        portal: *const ::std::os::raw::c_char,
+    ) -> *mut PGresult;
 }
 extern "C" {
-    pub fn PQsendDescribePrepared(conn: *mut PGconn,
-                                  stmt: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
+    pub fn PQsendDescribePrepared(
+        conn: *mut PGconn,
+        stmt: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQsendDescribePortal(conn: *mut PGconn,
-                                portal: *const ::std::os::raw::c_char)
-     -> ::std::os::raw::c_int;
+    pub fn PQsendDescribePortal(
+        conn: *mut PGconn,
+        portal: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQclear(res: *mut PGresult);
@@ -806,100 +860,124 @@ extern "C" {
     pub fn PQfreemem(ptr: *mut ::std::os::raw::c_void);
 }
 extern "C" {
-    pub fn PQmakeEmptyPGresult(conn: *mut PGconn, status: ExecStatusType)
-     -> *mut PGresult;
+    pub fn PQmakeEmptyPGresult(conn: *mut PGconn, status: ExecStatusType) -> *mut PGresult;
 }
 extern "C" {
-    pub fn PQcopyResult(src: *const PGresult, flags: ::std::os::raw::c_int)
-     -> *mut PGresult;
+    pub fn PQcopyResult(src: *const PGresult, flags: ::std::os::raw::c_int) -> *mut PGresult;
 }
 extern "C" {
-    pub fn PQsetResultAttrs(res: *mut PGresult,
-                            numAttributes: ::std::os::raw::c_int,
-                            attDescs: *mut PGresAttDesc)
-     -> ::std::os::raw::c_int;
+    pub fn PQsetResultAttrs(
+        res: *mut PGresult,
+        numAttributes: ::std::os::raw::c_int,
+        attDescs: *mut PGresAttDesc,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQresultAlloc(res: *mut PGresult, nBytes: usize)
-     -> *mut ::std::os::raw::c_void;
+    pub fn PQresultAlloc(res: *mut PGresult, nBytes: usize) -> *mut ::std::os::raw::c_void;
 }
 extern "C" {
-    pub fn PQsetvalue(res: *mut PGresult, tup_num: ::std::os::raw::c_int,
-                      field_num: ::std::os::raw::c_int,
-                      value: *mut ::std::os::raw::c_char,
-                      len: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn PQsetvalue(
+        res: *mut PGresult,
+        tup_num: ::std::os::raw::c_int,
+        field_num: ::std::os::raw::c_int,
+        value: *mut ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQescapeStringConn(conn: *mut PGconn,
-                              to: *mut ::std::os::raw::c_char,
-                              from: *const ::std::os::raw::c_char,
-                              length: usize,
-                              error: *mut ::std::os::raw::c_int) -> usize;
+    pub fn PQescapeStringConn(
+        conn: *mut PGconn,
+        to: *mut ::std::os::raw::c_char,
+        from: *const ::std::os::raw::c_char,
+        length: usize,
+        error: *mut ::std::os::raw::c_int,
+    ) -> usize;
 }
 extern "C" {
-    pub fn PQescapeLiteral(conn: *mut PGconn,
-                           str: *const ::std::os::raw::c_char, len: usize)
-     -> *mut ::std::os::raw::c_char;
+    pub fn PQescapeLiteral(
+        conn: *mut PGconn,
+        str: *const ::std::os::raw::c_char,
+        len: usize,
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn PQescapeIdentifier(conn: *mut PGconn,
-                              str: *const ::std::os::raw::c_char, len: usize)
-     -> *mut ::std::os::raw::c_char;
+    pub fn PQescapeIdentifier(
+        conn: *mut PGconn,
+        str: *const ::std::os::raw::c_char,
+        len: usize,
+    ) -> *mut ::std::os::raw::c_char;
 }
 extern "C" {
-    pub fn PQescapeByteaConn(conn: *mut PGconn,
-                             from: *const ::std::os::raw::c_uchar,
-                             from_length: usize, to_length: *mut usize)
-     -> *mut ::std::os::raw::c_uchar;
+    pub fn PQescapeByteaConn(
+        conn: *mut PGconn,
+        from: *const ::std::os::raw::c_uchar,
+        from_length: usize,
+        to_length: *mut usize,
+    ) -> *mut ::std::os::raw::c_uchar;
 }
 extern "C" {
-    pub fn PQunescapeBytea(strtext: *const ::std::os::raw::c_uchar,
-                           retbuflen: *mut usize)
-     -> *mut ::std::os::raw::c_uchar;
+    pub fn PQunescapeBytea(
+        strtext: *const ::std::os::raw::c_uchar,
+        retbuflen: *mut usize,
+    ) -> *mut ::std::os::raw::c_uchar;
 }
 extern "C" {
-    pub fn PQescapeString(to: *mut ::std::os::raw::c_char,
-                          from: *const ::std::os::raw::c_char, length: usize)
-     -> usize;
+    pub fn PQescapeString(
+        to: *mut ::std::os::raw::c_char,
+        from: *const ::std::os::raw::c_char,
+        length: usize,
+    ) -> usize;
 }
 extern "C" {
-    pub fn PQescapeBytea(from: *const ::std::os::raw::c_uchar,
-                         from_length: usize, to_length: *mut usize)
-     -> *mut ::std::os::raw::c_uchar;
+    pub fn PQescapeBytea(
+        from: *const ::std::os::raw::c_uchar,
+        from_length: usize,
+        to_length: *mut usize,
+    ) -> *mut ::std::os::raw::c_uchar;
 }
 extern "C" {
-    pub fn PQprint(fout: *mut FILE, res: *const PGresult,
-                   ps: *const PQprintOpt);
+    pub fn PQprint(fout: *mut FILE, res: *const PGresult, ps: *const PQprintOpt);
 }
 extern "C" {
-    pub fn PQdisplayTuples(res: *const PGresult, fp: *mut FILE,
-                           fillAlign: ::std::os::raw::c_int,
-                           fieldSep: *const ::std::os::raw::c_char,
-                           printHeader: ::std::os::raw::c_int,
-                           quiet: ::std::os::raw::c_int);
+    pub fn PQdisplayTuples(
+        res: *const PGresult,
+        fp: *mut FILE,
+        fillAlign: ::std::os::raw::c_int,
+        fieldSep: *const ::std::os::raw::c_char,
+        printHeader: ::std::os::raw::c_int,
+        quiet: ::std::os::raw::c_int,
+    );
 }
 extern "C" {
-    pub fn PQprintTuples(res: *const PGresult, fout: *mut FILE,
-                         printAttName: ::std::os::raw::c_int,
-                         terseOutput: ::std::os::raw::c_int,
-                         width: ::std::os::raw::c_int);
+    pub fn PQprintTuples(
+        res: *const PGresult,
+        fout: *mut FILE,
+        printAttName: ::std::os::raw::c_int,
+        terseOutput: ::std::os::raw::c_int,
+        width: ::std::os::raw::c_int,
+    );
 }
 extern "C" {
     pub fn PQlibVersion() -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQmblen(s: *const ::std::os::raw::c_char,
-                   encoding: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn PQmblen(
+        s: *const ::std::os::raw::c_char,
+        encoding: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQdsplen(s: *const ::std::os::raw::c_char,
-                    encoding: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn PQdsplen(
+        s: *const ::std::os::raw::c_char,
+        encoding: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
 }
 extern "C" {
     pub fn PQenv2encoding() -> ::std::os::raw::c_int;
 }
 extern "C" {
-    pub fn PQencryptPassword(passwd: *const ::std::os::raw::c_char,
-                             user: *const ::std::os::raw::c_char)
-     -> *mut ::std::os::raw::c_char;
+    pub fn PQencryptPassword(
+        passwd: *const ::std::os::raw::c_char,
+        user: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
 }
