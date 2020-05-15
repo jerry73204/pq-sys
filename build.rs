@@ -97,7 +97,10 @@ fn main() {
 }
 
 fn configured_by_pkg_config() -> bool {
-    pkg_config::probe_library("libpq").is_ok()
+    pkg_config::Config::new()
+        .print_system_cflags(false)
+        .print_system_libs(false)
+        .probe("libpq").is_ok()
 }
 
 #[cfg(target_env = "msvc")]
